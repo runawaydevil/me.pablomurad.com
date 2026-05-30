@@ -1,0 +1,11 @@
+services:
+  web:
+    build:
+      context: .
+      args:
+        VITE_SITE_URL: ${VITE_SITE_URL}
+        VITE_SITE_NAME: ${VITE_SITE_NAME}
+    ports:
+      - "${PORT:-5189}:80"
+    restart: unless-stopped
+    env_file: .env

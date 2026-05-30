@@ -1,0 +1,141 @@
+body {
+  margin: 0;
+  background: #f7f4ec;
+  font-family: system-ui, sans-serif;
+}
+
+.page {
+  min-height: 100vh;
+  padding: 64px 24px 96px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  align-items: center;
+
+  background-image: radial-gradient(#b8b2a4 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+.lang-toggle {
+  position: sticky;
+  top: 16px;
+  z-index: 10;
+  display: flex;
+  gap: 0;
+  background: white;
+  border: 3px solid #111;
+  border-radius: 999px;
+  box-shadow: 5px 5px 0 #111;
+  overflow: hidden;
+}
+
+.lang-toggle button {
+  font: inherit;
+  font-weight: 700;
+  padding: 10px 20px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: #111;
+}
+
+.lang-toggle button.active {
+  background: #111;
+  color: #fffdf7;
+}
+
+.lang-toggle button:not(.active):hover {
+  background: #f7f4ec;
+}
+
+.comic-card {
+  position: relative;
+  width: min(680px, 92vw);
+  background: var(--panel-accent, #fffdf7);
+  border: 3px solid #111;
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 10px 10px 0 #111;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.comic-card:hover {
+  transform: translateY(-6px) rotate(0deg);
+  box-shadow: 14px 14px 0 color-mix(in srgb, var(--panel-accent, #111) 40%, #111);
+}
+
+.comic-card img {
+  width: 100%;
+  display: block;
+  border: 3px solid #111;
+  border-radius: 12px;
+  object-fit: contain;
+  background: #fff;
+}
+
+.comic-card h2 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  margin: 16px 0 8px;
+  letter-spacing: -0.06em;
+}
+
+.comic-card p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.story-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 16px 0 0;
+}
+
+.comic-card[data-layout='text-first'] .story-text {
+  margin: 0 0 16px;
+}
+
+.panel-index {
+  position: absolute;
+  top: -14px;
+  left: 20px;
+  background: white;
+  border: 3px solid #111;
+  border-radius: 999px;
+  padding: 4px 12px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  box-shadow: 3px 3px 0 #111;
+}
+
+.big {
+  width: min(860px, 94vw);
+}
+
+.rotate-left {
+  transform: rotate(-1.5deg);
+}
+
+.rotate-right {
+  transform: rotate(1.5deg);
+}
+
+.bubble {
+  display: inline-block;
+  background: white;
+  border: 3px solid #111;
+  border-radius: 999px;
+  padding: 12px 18px;
+  box-shadow: 5px 5px 0 #111;
+  font-weight: 700;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .comic-card {
+    transition: none;
+  }
+
+  .comic-card:hover {
+    transform: none;
+    box-shadow: 10px 10px 0 #111;
+  }
+}
