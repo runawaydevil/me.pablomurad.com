@@ -3,7 +3,7 @@ export const defaultLang = 'en'
 export const panels = [
   {
     id: '00',
-    image: '/imgs/0.png',
+    image: '/imgs/0.webp',
     text: {
       en: 'Hi. This is me — or perhaps who I used to be. More precisely: this was me as a child.',
       pt: 'Oi. Este sou eu — ou, talvez, quem eu fui. Melhor dizendo: este era eu quando criança.',
@@ -15,7 +15,7 @@ export const panels = [
   },
   {
     id: '01',
-    image: '/imgs/1.png',
+    image: '/imgs/1.webp',
     text: {
       en: 'As a child, my interests followed their own quiet paths: I loved reading, playing alone, and discovering the world of computers.',
       pt: 'Na infância, meus interesses caminhavam por trilhas próprias: eu gostava de ler, brincar sozinho e descobrir o mundo dos computadores.',
@@ -27,7 +27,7 @@ export const panels = [
   },
   {
     id: '002',
-    image: '/imgs/2.png',
+    image: '/imgs/2.webp',
     text: {
       en: 'Even so, I was very happy in the little town where I was born. I ran up and down the streets with my friends; and in the late afternoon, we ran even more, crossing the town beneath the golden light of sunset.',
       pt: 'Ainda assim, fui muito feliz na pequena cidade onde nasci. Corria para cima e para baixo com meus amigos; e, ao fim da tarde, corríamos ainda mais, atravessando as ruas sob a luz dourada do pôr do sol.',
@@ -39,7 +39,7 @@ export const panels = [
   },
   {
     id: '003',
-    image: '/imgs/3.png',
+    image: '/imgs/3.webp',
     text: {
       en: 'At school, people always considered me a little eccentric. To me, that was never a problem; in a way, I even liked it. What was difficult was understanding what the teacher was saying.',
       pt: 'Na escola, sempre me consideraram um pouco excêntrico. Para mim, isso nunca foi um problema; de certo modo, eu até gostava. O difícil era compreender o que o professor dizia.',
@@ -51,7 +51,7 @@ export const panels = [
   },
   {
     id: '004',
-    image: '/imgs/4.png',
+    image: '/imgs/4.webp',
     text: {
       en: 'But I understood my own thoughts very well. Inside me, they followed a strangely precise order.',
       pt: 'Mas eu compreendia muito bem os meus próprios pensamentos. Dentro de mim, eles obedeciam a uma ordem estranhamente precisa.',
@@ -63,7 +63,7 @@ export const panels = [
   },
   {
     id: '005',
-    image: '/imgs/5.png',
+    image: '/imgs/5.webp',
     text: {
       en: 'What had no order was the world. And on top of that, it was far too loud.',
       pt: 'O que não tinha ordem era o mundo. E, além disso, ele era barulhento demais.',
@@ -75,7 +75,7 @@ export const panels = [
   },
   {
     id: '006',
-    image: '/imgs/6.png',
+    image: '/imgs/6.webp',
     text: {
       en: 'Still, I accepted the world. The problem was that the world did not always accept me back. So, little by little, I chose silence.',
       pt: 'Mesmo assim, aceitei o mundo. O problema é que nem sempre o mundo me aceitava de volta. Então, pouco a pouco, resolvi me calar.',
@@ -87,7 +87,7 @@ export const panels = [
   },
   {
     id: '007',
-    image: '/imgs/7.png',
+    image: '/imgs/7.webp',
     text: {
       en: 'Then they told me I had depression — and filled me with medication.',
       pt: 'Disseram-me, então, que eu tinha depressão — e me encheram de remédios.',
@@ -99,7 +99,7 @@ export const panels = [
   },
   {
     id: '008',
-    image: '/imgs/8.png',
+    image: '/imgs/8.webp',
     text: {
       en: 'Until, one day, they discovered that my real struggle was paying attention. Then, at last, they gave me the right medication.',
       pt: 'Até que, um dia, descobriram que meu verdadeiro desafio era prestar atenção. Então, finalmente, me deram os remédios certos.',
@@ -111,7 +111,7 @@ export const panels = [
   },
   {
     id: '009',
-    image: '/imgs/9.png',
+    image: '/imgs/9.webp',
     text: {
       en: 'And the world became clearer, more beautiful; and, for the first time, everything began to make sense.',
       pt: 'E o mundo se tornou mais claro, mais bonito; e, pela primeira vez, tudo começou a fazer sentido.',
@@ -120,5 +120,44 @@ export const panels = [
     rotate: 'left',
     accent: '#f0e6b8',
     alt: { en: 'Clarity and beauty', pt: 'Clareza e beleza' },
+  },
+  {
+    id: '010',
+    image: '/imgs/10.webp',
+    text: {
+      en: 'I could see everything, understand everything, but I could not understand...',
+      pt: 'Eu podia ver tudo, compreender tudo, mas não conseguia compreender...',
+    },
+    layout: 'default',
+    rotate: 'right',
+    accent: '#1a2433',
+    dark: true,
+    alt: { en: 'Standing above the city in the storm', pt: 'De pé sobre a cidade na tempestade' },
+  },
+  {
+    id: '011',
+    image: '/imgs/11.webp',
+    text: {
+      en: '...I could not understand them.',
+      pt: '...não podia compreender eles.',
+    },
+    layout: 'default',
+    rotate: 'left',
+    accent: '#0d1a2e',
+    dark: true,
+    alt: { en: 'Watching the crowd from above', pt: 'Observando a multidão de cima' },
+  },
+  {
+    id: '012',
+    image: '/imgs/12.webp',
+    text: {
+      en: 'But I learned to love them, and life went on — this time, sweeter.',
+      pt: 'Mas aprendi a amá-los, e a vida continuou — dessa vez, mais doce.',
+    },
+    layout: 'default',
+    rotate: 'right',
+    accent: '#2e3d2e',
+    dark: true,
+    alt: { en: 'Embracing someone in a garden at dusk', pt: 'Abraçando alguém num jardim ao entardecer' },
   },
 ]

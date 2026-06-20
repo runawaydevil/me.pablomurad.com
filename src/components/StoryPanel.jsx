@@ -7,36 +7,46 @@ function StoryPanel({ panel, lang, index }) {
         : ''
 
   const layoutClass = panel.layout === 'hero' ? 'big' : ''
-
   const isHeroIntro = panel.id === '00'
   const isTextFirst = panel.layout === 'text-first'
 
   const image = (
-    <img src={panel.image} alt={panel.alt[lang]} loading={index < 2 ? 'eager' : 'lazy'} />
+    <img
+      src={panel.image}
+      alt={panel.alt[lang]}
+      loading={index < 2 ? 'eager' : 'lazy'}
+    />
   )
 
-  const text = <p className="story-text">{panel.text[lang]}</p>
+  const caption = (
+    <div className="caption-box">
+      <p className="story-text">{panel.text[lang]}</p>
+    </div>
+  )
 
   return (
     <section
       className={`comic-card ${layoutClass} ${rotateClass}`.trim()}
       data-layout={panel.layout}
       data-panel={panel.id}
+      data-dark={panel.dark ? 'true' : undefined}
       style={{ '--panel-accent': panel.accent }}
     >
       <span className="panel-index">{panel.id}</span>
 
       {isHeroIntro && (
-        <div className="caption">
+        <>
           {image}
-          <h2>Understanding Pablo</h2>
-          {text}
-        </div>
+          <div className="caption-box">
+            <h2 className="hero-title">Understanding Pablo</h2>
+            <p className="story-text">{panel.text[lang]}</p>
+          </div>
+        </>
       )}
 
       {!isHeroIntro && isTextFirst && (
         <>
-          {text}
+          {caption}
           {image}
         </>
       )}
@@ -44,7 +54,7 @@ function StoryPanel({ panel, lang, index }) {
       {!isHeroIntro && !isTextFirst && (
         <>
           {image}
-          {text}
+          {caption}
         </>
       )}
     </section>

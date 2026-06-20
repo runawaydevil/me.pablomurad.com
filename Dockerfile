@@ -6,7 +6,8 @@ COPY . .
 ARG VITE_SITE_URL
 ARG VITE_SITE_NAME
 ENV VITE_SITE_URL=$VITE_SITE_URL VITE_SITE_NAME=$VITE_SITE_NAME
-RUN npm run build
+RUN npm run build \
+  && find dist/imgs -name '*.png' -delete
 
 FROM nginx:1.27-alpine
 COPY nginx/default.conf /etc/nginx/conf.d/default.conf
